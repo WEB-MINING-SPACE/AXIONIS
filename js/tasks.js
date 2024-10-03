@@ -326,9 +326,7 @@ function addsee(id) {
 
     // Save the updated workLine back to local storage
     localStorage.setItem('axionis', JSON.stringify(workLine));
-    setTimeout(function() {
-        location.reload();
-    }, 2500);
+    document.getElementById('code_popup').style.display = 'none';
 }
 
 function send(id, inputed) {
