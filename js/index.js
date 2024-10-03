@@ -8,7 +8,7 @@ window.onload = function() {
         // Display the user info
         document.getElementById('name').innerHTML = `<i class="fa-solid fa-chevron-right"></i> ${workLine.name}`;
         document.getElementById('textToCopy').innerHTML = workLine.id;
-        document.getElementById('coin_qty').innerHTML = `<i class="fa-solid fa-coins"></i> ${workLine.coin}`;
+        document.getElementById('coin_qty').innerHTML = `<i class="fa-solid fa-diamond"></i> ${workLine.coin}`;
 
         if (workLine.farming) {
             // If farming has started, show the farming button and update the timer
@@ -83,7 +83,7 @@ function claimCoin() {
         // alert(`You claimed 72 coins! Total coins: ${workLine.coin}`);
 
         // Show the start farming button again
-        document.getElementById('coin_qty').innerHTML = `<i class="fa-solid fa-coins"></i> ${workLine.coin}`;
+        document.getElementById('coin_qty').innerHTML = `<i class="fa-solid fa-diamond"></i> ${workLine.coin}`;
         document.getElementById('claim_coin').style.display = 'none';
         document.getElementById('start_farming').style.display = 'block';
     }
