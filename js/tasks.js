@@ -179,7 +179,16 @@ function dhandleTaskClick(id, coins) {
     if (!workLine.complete.includes(id)) {
         // Add the task ID to the completed tasks
         workLine.complete.push(id);
-
+        const element = document.getElementById('success');
+        element.style.display = 'block';
+        element.innerHTML = `
+        <div class="success_text">
+            <h3> <i class="fa-solid fa-circle-check"></i> You got ${coins} coins </h3>
+        </div>`;
+        setTimeout(() => {
+            element.style.display = 'none';
+            window.location.reload();
+        }, 5000);
         // Add the coins to the user's total
         workLine.coin += coins;
 
