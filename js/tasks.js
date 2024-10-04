@@ -212,7 +212,16 @@ function dhandleTaskClick(id, coins) {
         localStorage.setItem('axionis', JSON.stringify(workLine));
     }
 }
-
+function copyBITPLUS(){
+    const textToCopy = 'https://t.me/axionis_bot';
+    navigator.clipboard.writeText(textToCopy)
+    document.getElementById('popup').innerHTML = `
+        <div class="pop_text">
+            <h4>Link is copied!</h4>
+            <button class="okay" onclick="document.getElementById('popup').style.display='none'">Okay</button>
+        </div>`;
+    document.getElementById('popup').style.display = 'flex';
+}
 
 // Loop through each item in taskData array
 taskData.forEach((item) => {
